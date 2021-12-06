@@ -21,5 +21,5 @@ echo 'please provides your env for tencent cloud DOMAIN'
 exit 1
 fi
 
-python tx-dns-update.py --access_key_id ${SECRETID} --access_key_secret ${SECRETKEY} --subdomain ${SUBDOMAIN} --domain ${DOMAIN}
+python3 tx-dns-update.py --access_key_id ${SECRETID} --access_key_secret ${SECRETKEY} --subdomain ${SUBDOMAIN} --domain ${DOMAIN}
 

@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+from importlib import reload
 from QcloudApi.qcloudapi import QcloudApi
 import requests
 import json
@@ -10,7 +11,7 @@ import argparse
 import sys
 from socket import gethostbyname
 reload(sys) 
-sys.setdefaultencoding('utf8') 
+#sys.setdefaultencoding('utf8') 
 #get your true IP
 def get_out_ip():
     session = requests.Session()
@@ -113,7 +114,7 @@ def main():
     parser.add_argument("--domain", type=str, required=True)
     parser.add_argument("--subdomain", type=str, required=True)
     parser.add_argument("--ip", type=str, default="0.0.0.0")
-    parser.add_argument("--sleep", type=int, default=5)
+    parser.add_argument("--sleep", type=int, default=60)
     args = parser.parse_args()
     while True:
         try:
